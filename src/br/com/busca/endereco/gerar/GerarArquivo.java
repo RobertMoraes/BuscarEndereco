@@ -31,9 +31,8 @@ public class GerarArquivo {
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
                 .create();
-        FileWriter escrita = null;
         try {
-            escrita = new FileWriter("enderecos.json");
+            FileWriter escrita = new FileWriter("enderecos.json");
             escrita.write(gson.toJson(endereco));
             escrita.close();
         } catch (IOException e) {
