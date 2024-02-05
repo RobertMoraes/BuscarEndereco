@@ -32,7 +32,7 @@ public class GerarArquivo {
                 .setPrettyPrinting()
                 .create();
         try {
-            FileWriter escrita = new FileWriter("enderecos.json");
+            FileWriter escrita = new FileWriter(endereco.cep().replace("-", "") + "enderecos.json");
             escrita.write(gson.toJson(endereco));
             escrita.close();
         } catch (IOException e) {
